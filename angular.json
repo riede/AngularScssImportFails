@@ -28,7 +28,8 @@
             ],
             "styles": [
               "src/styles/theme-green.scss",
-              "src/styles/theme-blue.scss"
+              "src/styles/theme-blue.scss",
+              "src/styles/portal.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true

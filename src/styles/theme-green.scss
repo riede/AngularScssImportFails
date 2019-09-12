@@ -3,6 +3,7 @@
 $primary: #20b2aa;
 
 .theme-green {
-  @import "third-party";
+  // uncomment the following line to see that this doesn't work with 3rd party code, too
+  // @import "third-party";
 }
 
