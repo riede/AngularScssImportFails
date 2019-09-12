@@ -2,26 +2,28 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
-## Development server
+## Reproduce the behaviour
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. The app starts without any warnings or errors.
 
-## Code scaffolding
+Run `ng serve --prod` to build and serve the app in production mode. The app starts without an error. But several warnings occurs. The `@media print` statement in the bootstrap styles is removed by angular`s optimization. The closing braket is still there. Because of that a warning occurs that the braket is unexpected. Here you can see the warnings:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+WARNING in Unexpected '}' at 6269:31.
 
-## Build
+WARNING in Unexpected '}' at 12539:31.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+WARNING in Invalid character(s) '}
 
-## Running unit tests
+' at 12539:31. Ignoring.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+WARNING in Invalid property name '.theme-green {
+        size' at /Users/priedemann/Development/angular-scss-import-fails/src/styles/theme-green.scss:5:0. Ignoring.
 
-## Running end-to-end tests
+WARNING in Invalid selector '}
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+.theme-blue' at /Users/priedemann/Development/angular-scss-import-fails/node_modules/bootstrap/scss/_print.scss:137:5. Ignoring.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+WARNING in Invalid property name '.theme-blue {
+        size' at /Users/priedemann/Development/angular-scss-import-fails/src/styles/theme-blue.scss:5:0. Ignoring.
+```
